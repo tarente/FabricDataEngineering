@@ -10,15 +10,15 @@ The notebook **NTB 000 Utils**:
  * Set some Spark configuration.
  * Defines some commonly used PySpark functions.
  * Two functions to print (or try to print) secrets. I.e., when they are printed as [REDACTED]:
-  * **fnGetPrintableSecretLong** (strSecret, strSeparator = chr(29), intIndentationLevel = 0): strPossiblyPrintableSecret
-    * **strSecret**: secret to be modified to be printable. Normally, stored in Azure Key Vault and obtained by using **notebookutils.credentials.getSecret**.
-    * **strSeparator** (optional): the string to be used to separate each character in the strSecret.
-    * **intIndentationLevel** (optional): defines the indentation level of the information printed by the function.
-  * **fnGetPrintableSecretShort** (strSecret, strSeparator = chr(29), intIndentationLevel = 0): strPossiblyPrintableSecret
-    * **strSecret**: secret to be modified to be printable. Normally, stored in Azure Key Vault and obtained by using **notebookutils.credentials.getSecret**.
-    * **strSeparator** (optional): the string to be used to separate each character in the strSecret.
-    * **intIndentationLevel** (optional): defines the indentation level of the information printed by the function.
-  * The main difference between the functions **fnGetPrintableSecretLong** and **fnGetPrintableSecretShort**, is that the former retunrs a bigger string representation of the **strSecret**, since it will happend the **strSeparator** after each character in **strSecret**. While the latter, will only had a **strSeparator** between the first and second character of the **strSecret**.
+   * **fnGetPrintableSecretLong** (strSecret, strSeparator = chr(29), intIndentationLevel = 0): strPossiblyPrintableSecret
+     * **strSecret**: secret to be modified to be printable. Normally, stored in Azure Key Vault and obtained by using **notebookutils.credentials.getSecret**.
+     * **strSeparator** (optional): the string to be used to separate each character in the strSecret.
+     * **intIndentationLevel** (optional): defines the indentation level of the information printed by the function.
+   * **fnGetPrintableSecretShort** (strSecret, strSeparator = chr(29), intIndentationLevel = 0): strPossiblyPrintableSecret
+     * **strSecret**: secret to be modified to be printable. Normally, stored in Azure Key Vault and obtained by using **notebookutils.credentials.getSecret**.
+     * **strSeparator** (optional): the string to be used to separate each character in the strSecret.
+     * **intIndentationLevel** (optional): defines the indentation level of the information printed by the function.
+   * The main difference between the functions **fnGetPrintableSecretLong** and **fnGetPrintableSecretShort**, is that the former retunrs a bigger string representation of the **strSecret**, since it will happend the **strSeparator** after each character in **strSecret**. While the latter, will only had a **strSeparator** between the first and second character of the **strSecret**.
 
 To be used in other notebooks in this repository.
 
