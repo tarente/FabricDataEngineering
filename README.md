@@ -70,7 +70,7 @@ To use this notebook, you need to set the following values:
 ---
 The notebook **NTB 911 Print Key Vault Secret** shows examples of displaying three secrets stored in an Azure Key Vault.
 This notebook has inspired after watching this https://www.youtube.com/watch?v=XI94dJyxHwU (Keep your secrets SAFE in Microsoft Fabric and Azure Key Vault) and is getting the following values from a user defined Azure Key Vault:
- * **strAKVURL**: \<replace by your Azure Key Vault URL\>.
+ * **strAKVURL**: **\<replace by your Azure Key Vault URL\>**.
  * **key-YouTubeURL**: https://www.youtube.com/watch.
  * **key-YouTubeParameters**: ?v=
  * **key-YouTubeVideoID** XI94dJyxHwU
