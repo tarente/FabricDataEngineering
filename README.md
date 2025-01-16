@@ -1,5 +1,5 @@
 This repository contains some Notebooks (PySpark) for the following functionality:
- * Print secrets from Azure Key Vault for debugging purpose. Examples available in **NTB 911 Print Key Vault Secret**, read the Post with more infomation in https://www.linkedin.com/pulse/two-options-print-secret-fabric-notebook-tiago-rente-rwptf.
+ * Print secrets from Azure Key Vault for debugging purpose. Examples available in **NTB 911 Print Key Vault Secret**, read the Post with more information in https://www.linkedin.com/pulse/two-options-print-secret-fabric-notebook-tiago-rente-rwptf.
  * Get the delta table history located in Fabric's Lakehouse. Examples available in **NTB 901 Table History**, read the post with more information in https://www.linkedin.com/pulse/how-get-information-delta-table-history-fabrics-lakehouse-tiago-rente-ll1xf.
 
 Import the 3 notebooks described bellow in a same folder in a Fabric Workspace and change of the configuration of the notebook **NTB 901 Table History**.
