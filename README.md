@@ -62,9 +62,9 @@ Instead of using the redefined function, you can create Shortcuts in a new Lakeh
 
 ---
 The notebook **NTB 221 Check Direct Lake Guardrails** sample notebook to call the new version of the **get_lakehouse_tables** and check the differences between executing through the schema enabled Lakehouse and the Lakehouse with Shortcuts. Assuming that both Lakehouses are in the same Workspace you just need to change the value of the following variables:
-o	lakehouse       = "Lakehouse Name containing the shortcuts"
-o	lakehouseSchema = "Schema enabled Lakehouse Name"
-o	workspace       = "<Workspace Name>"
+ * lakehouse       = "Lakehouse Name containing the shortcuts"
+ * lakehouseSchema = "Schema enabled Lakehouse Name"
+ * workspace       = "<Workspace Name>"
 
 **Limitations**:
  * If any table in the Lakehouse has been inserted as a partitioned and as a non-partitioned table, then the Notebook will fail.
