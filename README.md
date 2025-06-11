@@ -52,6 +52,24 @@ The main difference between the functions **fnGetDeltaTableHistory** and **fnGet
  * The PySpark functions defined in **NTB 002 Table History** do not work with Lakehouses that have the Lakehouse schemas enabled (https://learn.microsoft.com/en-us/fabric/data-engineering/lakehouse-schemas).
 
 ---
+The notebook **NTB 011 get_lakehouse_tables_schema** re-defines the Semantic Link Labs' get_lakehouse_tables PySpark (see https://semantic-link-labs.readthedocs.io/en/stable/sempy_labs.lakehouse.html#sempy_labs.lakehouse.get_lakehouse_tables) to work with schema enabled Lakehouse.
+
+Instead of using the redefined function, you can create Shortcuts in a new Lakehouse and then call the Semantic Link Labs' in the Lakehouse with the Shortcuts.
+
+
+**Limitations**:
+ * If any table in the Lakehouse has been inserted as a partitioned and as a non-partitioned table, then the function will fail. This also true for the original function.
+
+---
+The notebook **NTB 221 Check Direct Lake Guardrails** sample notebook to call the new version of the **get_lakehouse_tables** and check the differences between executing through the schema enabled Lakehouse and the Lakehouse with Shortcuts. Assuming that both Lakehouses are in the same Workspace you just need to change the value of the following variables:
+o	lakehouse       = "Lakehouse Name containing the shortcuts"
+o	lakehouseSchema = "Schema enabled Lakehouse Name"
+o	workspace       = "<Workspace Name>"
+
+**Limitations**:
+ * If any table in the Lakehouse has been inserted as a partitioned and as a non-partitioned table, then the Notebook will fail.
+
+---
 The notebook **NTB 901 Table History** allows to dynamically attach the notebook to a Fabric Lakehouse (as described in **Programmatically defining the default lakehouse of a notebook**, see  https://fabric.guru/how-to-attach-a-default-lakehouse-to-a-notebook-in-fabric).
 
 To use this notebook, you need to set the following values:
