@@ -70,6 +70,15 @@ The notebook **NTB 221 Check Direct Lake Guardrails** sample notebook to call th
  * If any table in the Lakehouse has been inserted as a partitioned and as a non-partitioned table, then the Notebook will fail.
 
 ---
+The notebook **NTB 801 delete_capacity_tenant_settings_overrides** Deletes and returns list of tenant setting overrides that override at the capacities after applying the tenant_setting filter.
+
+To use this notebook, you need to set the following values:
+ * Fourth cell - Lakehouse configuration:
+   * **\<capacity\>**: The capacity name or ID. Defaults to None which resolves to showing/deleting all capacities.
+   * **\<tenant_setting\>**: The tenant setting name. Example: "TenantSettingForCapacityDelegatedSwitch" Defaults to None which resolves to showing/deleting all tenant settings.
+   * **\<dry_run\>**: Show or delete the tenant settings override at the capacities Defaults to True which resolves to showing the tenant settings override at the capacities. 
+
+---
 The notebook **NTB 901 Table History** allows to dynamically attach the notebook to a Fabric Lakehouse (as described in **Programmatically defining the default lakehouse of a notebook**, see  https://fabric.guru/how-to-attach-a-default-lakehouse-to-a-notebook-in-fabric).
 
 To use this notebook, you need to set the following values:
