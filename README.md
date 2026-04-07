@@ -71,29 +71,29 @@ The notebook **NTB 221 Check Direct Lake Guardrails** sample notebook to call th
 
 ---
 The notebook **NTB 701 list_activity_events_multiple_days** sample notebook tp call the new function **list_activity_events_multiple_days**:
-  Shows a list of audit activity events for a tenant.
+Shows a list of audit activity events for a tenant.
 
-  This is a wrapper function for the following API: `Admin - Get Activity Events <https://learn.microsoft.com/rest/api/power-bi/admin/get-activity-events>`_.
+This is a wrapper function for the following API: `Admin - Get Activity Events <https://learn.microsoft.com/rest/api/power-bi/admin/get-activity-events>`_.
 
-  Service Principal Authentication is supported (see `here <https://github.com/microsoft/semantic-link-labs/blob/main/notebooks/Service%20Principal.ipynb>`_ for examples).
+Service Principal Authentication is supported (see `here <https://github.com/microsoft/semantic-link-labs/blob/main/notebooks/Service%20Principal.ipynb>`_ for examples).
 
-  Parameters
-  ----------
-  start_time : str
+Parameters
+----------
+start_time : str
       Start date and time of the window for audit event results. Example: "2024-09-25T07:55:00".
-  end_time : str
-      End date and time of the window for audit event results. Example: "2024-09-25T08:55:00".
-  activity_filter : str, default=None
-      Filter value for activities. Example: 'viewreport'.
-  user_id_filter : str, default=None
-      Email address of the user.
-  return_dataframe : bool, default=True
-      If True the response is a pandas.DataFrame. If False returns a dict. Default True
+end_time : str
+    End date and time of the window for audit event results. Example: "2024-09-25T08:55:00".
+activity_filter : str, default=None
+    Filter value for activities. Example: 'viewreport'.
+user_id_filter : str, default=None
+    Email address of the user.
+return_dataframe : bool, default=True
+    If True the response is a pandas.DataFrame. If False returns a dict. Default True
 
-  Returns
-  -------
-  pandas.DataFrame | dict
-      A pandas dataframe or dict showing a list of audit activity events for a tenant.
+Returns
+-------
+pandas.DataFrame | dict
+    A pandas dataframe or dict showing a list of audit activity events for a tenant.
 
 To use this notebook, you need to set the following values in sixth cell:
 
