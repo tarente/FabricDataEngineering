@@ -79,39 +79,33 @@ Service Principal Authentication is supported (see `here <https://github.com/mic
 
 Parameters
 ----------
-start_time : str
-      Start date and time of the window for audit event results. Example: "2024-09-25T07:55:00".
-end_time : str
-    End date and time of the window for audit event results. Example: "2024-09-25T08:55:00".
-activity_filter : str, default=None
-    Filter value for activities. Example: 'viewreport'.
-user_id_filter : str, default=None
-    Email address of the user.
-return_dataframe : bool, default=True
-    If True the response is a pandas.DataFrame. If False returns a dict. Default True
+* start_time : str - Start date and time of the window for audit event results. Example: "2024-09-25T07:55:00".
+* end_time : str - End date and time of the window for audit event results. Example: "2024-09-25T08:55:00".
+* activity_filter : str, default=None - Filter value for activities. Example: 'viewreport'.
+* user_id_filter : str, default=None - Email address of the user.
+* return_dataframe : bool, default=True - If True the response is a pandas.DataFrame. If False returns a dict. Default True
 
 Returns
 -------
-pandas.DataFrame | dict
-    A pandas dataframe or dict showing a list of audit activity events for a tenant.
+* pandas.DataFrame | dict - A pandas dataframe or dict showing a list of audit activity events for a tenant.
 
 To use this notebook, you need to set the following values in sixth cell:
 
 Example 1 - **get all activity events in the your tenant from the last 28 days as a pandas Dataframe**:
-  start_day = (datetime.utcnow().date() - timedelta(days=27)).strftime("%Y-%m-%d")
-  num_days  = **28**
-  inc_days = **1**
-  activity_filter = None
-  user_id_filter = None
-  return_dataframe = **True**
+* start_day = (datetime.utcnow().date() - timedelta(days=27)).strftime("%Y-%m-%d")
+* num_days  = **28**
+* inc_days = **1**
+* activity_filter = None
+* user_id_filter = None
+* return_dataframe = **True**
 
 Example 2 - **get all activity events for the 3 consecutive weekdays in the your tenant as a dict**:
-  start_day = (datetime.utcnow().date() - timedelta(days=27)).strftime("%Y-%m-%d")
-  num_days  = **3**
-  inc_days = **7**
-  activity_filter = None
-  user_id_filter = None
-  return_dataframe = **False**
+* start_day = (datetime.utcnow().date() - timedelta(days=27)).strftime("%Y-%m-%d")
+* num_days  = **3**
+* inc_days = **7**
+* activity_filter = None
+* user_id_filter = None
+* return_dataframe = **False**
 
 ---
 The notebook **NTB 801 delete_capacity_tenant_settings_overrides** Deletes and returns list of tenant setting overrides that override at the capacities after applying the tenant_setting filter.
