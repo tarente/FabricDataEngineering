@@ -70,6 +70,14 @@ The notebook **NTB 221 Check Direct Lake Guardrails** sample notebook to call th
  * If any table in the Lakehouse has been inserted as a partitioned and as a non-partitioned table, then the Notebook will fail.
 
 ---
+The notebook **NTB 601 Calculate PPU Storage** sample notebook to calculate the size of all Semantic Models assigned to a Premium Per User. The user running the Notebook needs to be a Fabric Admin to be able to executed all REST APIs being called in the Notebook.
+The Notebook allows to use the sempy.model_memory_analyzer function of a parametrize model memory analyzer version that is faster to execute, does not print the tables for each semantic model and may return the size of semantic models, that the original sempy function will abort.
+
+**Limitations**:
+ * Needs to be executed by a Fabric Admin.
+ * It tested in a very small PPU tenant, so it may be slow in a bit PPU tenant or even abort for unpredict scenarios.
+
+---
 The notebook **NTB 701 list_activity_events_multiple_days** sample notebook tp call the new function **list_activity_events_multiple_days**:
 Shows a list of audit activity events for a tenant.
 
